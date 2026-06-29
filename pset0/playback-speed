@@ -1,0 +1,2 @@
+n = input ("What is the Input ?")
+print(n.replace(" ","..."))
