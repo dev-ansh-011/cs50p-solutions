@@ -1,0 +1,8 @@
+def main():
+    n = input ("Enter your input ")
+    print(convert(n))
+def convert(k):
+    k= k.replace(":)","🙂")
+    k= k.replace (":(","🙁")
+    return k
+main()
