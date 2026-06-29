@@ -1,0 +1,2 @@
+n = input ("What is the input ?")
+print(n.lower())
