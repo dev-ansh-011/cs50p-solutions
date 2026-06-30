@@ -1,2 +1,5 @@
+Q:  https://cs50.harvard.edu/python/psets/0/indoor/
+
+
 n = input ("What is the input ?")
 print(n.lower())
