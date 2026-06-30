@@ -1,0 +1,25 @@
+Q:  https://cs50.harvard.edu/python/psets/1/meal/
+
+
+def main():
+    n = input("what time is it? ")
+    f = convert(n)
+    if 7<=f<=8 :
+        print("breakfast time")
+    elif 12<=f<=13 :
+        print("lunch time")
+    elif 18<=f<=19 :
+        print("dinner time")
+    else:
+        print ("")
+def convert(time):
+    time = time.split(":")
+    if (time[1] != "0"):
+        minutes = float(time[1])
+        time[1] = minutes/60
+    g = float(time[0]) + time[1]
+    return g
+if __name__ == "__main__":
+    main()
+
+
