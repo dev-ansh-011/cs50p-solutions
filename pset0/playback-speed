@@ -1,2 +1,5 @@
+Q:  https://cs50.harvard.edu/python/psets/0/playback/
+
+
 n = input ("What is the Input ?")
 print(n.replace(" ","..."))
