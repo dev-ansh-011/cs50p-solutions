@@ -1,3 +1,6 @@
+Q:  https://cs50.harvard.edu/python/psets/0/einstein/
+
+
 m = int(input("m: "))
 E = m * 300000000 ** 2
 print("E:", E)
