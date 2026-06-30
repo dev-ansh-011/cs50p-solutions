@@ -1,0 +1,9 @@
+Q: https://cs50.harvard.edu/python/psets/1/deep/
+
+
+n = input ("what is the answer to the Great Question of Life, the Universe and Everything  " )
+n = n.strip().lower()
+if(n=="42" or n == "forty-two" or n == "forty two"):
+    print("yes")
+else:
+    print("no")
