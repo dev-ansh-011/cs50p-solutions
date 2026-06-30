@@ -1,0 +1,18 @@
+Q:  https://cs50.harvard.edu/python/psets/1/interpreter/
+
+
+n = input("Expression: ").split()
+x = float(n[0])
+y = n[1]
+z = float(n[2])
+if y == "+":
+    print(f"{x + z:.1f}")
+
+elif y == "-":
+    print(f"{x - z:.1f}")
+
+elif y == "*":
+    print(f"{x * z:.1f}")
+
+elif y == "/":
+    print(f"{x / z:.1f}")
