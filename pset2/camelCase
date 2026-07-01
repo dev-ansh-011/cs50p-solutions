@@ -1,0 +1,10 @@
+Q:  https://cs50.harvard.edu/python/psets/2/camel/
+
+
+n = input("camelCase : ")
+for c in n:
+    if c.islower():
+        print(c,end= "")
+    elif c.isupper():
+        print("_",end= "")
+        print(c.lower(), end="")
