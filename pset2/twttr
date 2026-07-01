@@ -1,0 +1,9 @@
+Q:  https://cs50.harvard.edu/python/psets/2/twttr/
+
+
+n = input("Input: ")
+for i in n:
+    if i.lower() in ["a","e","i","o","u"]:
+        continue
+    else:
+        print(i, end = "")
