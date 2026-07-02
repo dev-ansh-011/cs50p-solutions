@@ -1,0 +1,26 @@
+Q:  https://cs50.harvard.edu/python/psets/3/fuel/
+
+
+def main():
+    while True:
+        n = input("Fraction: ")
+        try:
+            x, y = n.split("/")
+            x = int(x)
+            y = int(y)
+            if x > y:
+                raise ValueError
+            if x<0 or y<0:
+                raise ValueError
+            f = round((x / y) * 100)
+            if f >= 99:
+                print("F")
+            elif f <= 1:
+                print("E")
+            else:
+                print(f"{f}%")
+            break
+        except (ValueError, ZeroDivisionError):
+            continue
+
+main()
