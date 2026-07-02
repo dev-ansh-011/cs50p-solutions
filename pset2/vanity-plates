@@ -1,0 +1,26 @@
+Q:  https://cs50.harvard.edu/python/psets/2/plates/
+
+
+def main():
+    plate = input("Plate: ")
+    if is_valid(plate):
+        print("Valid")
+    else:
+        print("Invalid")
+def is_valid(s):
+    m = 0
+    if len(s) > 6 or len(s) < 2:
+        return False
+    if not s[:2].isalpha():
+        return False
+    for i in range(len(s)):
+        if not s[i].isalnum():
+            return False
+        if i > 0 and s[i].isalpha() and s[i - 1].isdigit():
+            return False
+        if s[i].isdigit():
+            m += 1
+            if m == 1 and s[i] == "0":
+                return False
+    return True
+main()
