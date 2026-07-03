@@ -1,0 +1,40 @@
+Q:  https://cs50.harvard.edu/python/psets/3/outdated/
+
+
+months = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December"
+]
+while True:
+    try:
+        n = input("Date: ")
+        f = n.strip()
+        if "/" in f:
+            month, day, year = n.split("/")
+            month = int(month)
+            day = int(day)
+            year = int(year)
+            if(1 <= month <= 12) and (1<= day <=31):
+                print(f"{year}-{month:02}-{day:02}")   ## 02 here makes formatting 2 , for example: if month = 3 , it would print as 03
+                break
+        elif "," in f:
+            x = n.replace(",", "")
+            month, day, year = x.split()
+            day = int(day)
+            year = int(year)
+            month = months.index(month) + 1
+            if(1 <=  month <= 12) and (1<= day <=31):
+                print(f"{year}-{month:02}-{day:02}")
+                break
+    except ValueError:
+        pass
