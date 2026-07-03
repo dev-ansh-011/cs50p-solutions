@@ -1,0 +1,19 @@
+Q:  https://cs50.harvard.edu/python/psets/3/grocery/
+
+
+g = {}
+def main():
+    while True:
+        try:
+            n = input().lower()
+
+            if n in g:
+                g[n] += 1
+            else:
+                g[n] = 1
+        except EOFError:
+            break
+    for key in sorted(g):
+        print(g[key], key.upper())
+
+main()
