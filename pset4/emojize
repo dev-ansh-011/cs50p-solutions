@@ -1,0 +1,9 @@
+Q:  https://cs50.harvard.edu/python/psets/4/emojize/
+
+
+import emoji
+def main():
+    n = input("Input: ")
+    print(f"Output: {emoji.emojize(n, language='alias')}")
+
+main()
