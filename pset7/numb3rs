@@ -1,1 +1,47 @@
+Q:  https://cs50.harvard.edu/python/psets/7/numb3rs/
+
+
+numb3rd.py -----> import re
+                  import sys
+                  
+                  def main():
+                      print(validate(input("IPv4 Address: ")))
+                  
+                  def validate(ip):
+                      parts = ip.split(".")
+                      if len(parts) != 4:
+                          return False                        
+                      for part in parts:
+                          if not part.isdigit():
+                              return False
+                          if len(part) > 1 and part.startswith("0"):
+                              return False
+                          number = int(part)
+                          if number < 0 or number > 255:
+                              return False
+                  
+                      return True
+                
+                  if __name__ == "__main__":
+                      main()
+
+
+
+test_numb3rs.py ----->  import pytest
+                        from numb3rs import validate
+                        
+                        def test_alphabets():
+                            assert validate("dev") == False
+                            assert validate("cs50") == False
+                        
+                        def test_numbers():
+                            assert validate("1.1.1.1") == True
+                            assert validate("212.212.9.8") == True
+                            assert validate("0.0.0.0") == True
+                        
+                        def test_invalid_range():
+                            assert validate("256.1.1.1") == False
+                            assert validate("1.256.1.1") == False
+                            assert validate("1.1.256.1") == False
+                            assert validate("1.1.1.256") == False
 
